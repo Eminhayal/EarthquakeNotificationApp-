@@ -1,5 +1,5 @@
 //
-//  ContainerExtansioon.swift
+//  ContainerExtension.swift
 //  EarthquakeNotificationApp
 //
 //  Created by Emin Hayal on 10.07.2021.
@@ -65,18 +65,11 @@ extension ContainerViewController : SideMenuViewControllerDelegate{
             vc.didMove(toParent: homeVC)
             homeVC.title = vc.title
         }
-        func resetToHome(){
-            mapInfoVC.view.removeFromSuperview()
-            mapInfoVC.didMove(toParent: nil)
-            homeVC.title = "Anasayfa"
+    func resetToHome(){
+        mapInfoVC.view.removeFromSuperview()
+        mapInfoVC.didMove(toParent: nil)
+        homeVC.title = "Anasayfa"
         }
     
 
 }
-
-
-
-    
-
-
-

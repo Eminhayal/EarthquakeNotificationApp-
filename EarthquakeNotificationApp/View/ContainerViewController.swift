@@ -14,9 +14,9 @@ class ContainerViewController: UIViewController {
     }
     var menuState: MenuState = .closed
     
-    let menuVC = SideMenuViewController()
-    let homeVC = HomeViewController()
-    var mapInfoVC = EarthquakeMapInfoViewController()
+    let menuVC = SideMenuViewController.instantiate(storyboard: .sideMenu, bundle: nil, identifier: nil)
+    let homeVC = HomeViewController.instantiate(storyboard: .homeFlow, bundle: nil, identifier: nil)
+    var mapInfoVC = EarthquakeMapInfoViewController.instantiate(storyboard: .mapInfo, bundle: nil, identifier: nil)
     var navVC = UINavigationController()
     
     override func viewDidLoad() {

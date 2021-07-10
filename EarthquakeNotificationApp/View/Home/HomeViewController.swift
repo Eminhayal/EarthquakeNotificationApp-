@@ -18,7 +18,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .blue
         title = "Anasayfa"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "list.dash"),  style: .done, target: self, action: #selector(didTapMenuButton))
     }

@@ -13,7 +13,10 @@ protocol SideMenuViewControllerDelegate: AnyObject {
 
 class SideMenuViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     weak var delegate : SideMenuViewControllerDelegate?
+    
     enum menuOptions : String , CaseIterable{
         case home = "Anasayfa"
         case eartquake = "Deprem"
@@ -29,21 +32,18 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
         }
     }
     
-    private let tableView : UITableView = {
-        let table = UITableView()
-        table.backgroundColor = nil
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        return table
-    }()
     
     let greyColor = UIColor(red: 33/225.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tableView)
+        //view.addSubview(tableView)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
-        view.backgroundColor = greyColor
+        tableView.separatorStyle = .none
+       
+        tableView.backgroundColor = nil
         
     }
     override func viewDidLayoutSubviews() {

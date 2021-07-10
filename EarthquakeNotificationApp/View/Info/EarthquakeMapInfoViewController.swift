@@ -13,7 +13,7 @@ class EarthquakeMapInfoViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Deprem Harita Bilgilendirme"
-        view.backgroundColor = .brown
+       
         
     }
     
