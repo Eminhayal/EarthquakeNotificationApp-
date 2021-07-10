@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol MenuViewControllerDelegate : AnyObject {
-    func didTapMenu()
+protocol SideMenuViewControllerDelegate: AnyObject {
+    func didSelecet(menuItem: SideMenuViewController.menuOptions)
 }
 
-class MenuViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
+class SideMenuViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
 
-    weak var delegate : MenuViewControllerDelegate?
+    weak var delegate : SideMenuViewControllerDelegate?
     enum menuOptions : String , CaseIterable{
         case home = "Anasayfa"
         case eartquake = "Deprem"
@@ -46,6 +46,10 @@ class MenuViewController: UIViewController , UITableViewDelegate , UITableViewDa
         view.backgroundColor = greyColor
         
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = CGRect(x: 0, y: 200, width: view.bounds.size.width, height: view.bounds.size.height)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuOptions.allCases.count
@@ -54,7 +58,17 @@ class MenuViewController: UIViewController , UITableViewDelegate , UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell" , for: indexPath)
         cell.textLabel?.text = menuOptions.allCases[indexPath.row].rawValue
+        cell.textLabel?.textColor = .white
+        cell.imageView?.image = UIImage(systemName: menuOptions.allCases[indexPath.row].imageName)
+        cell.imageView?.tintColor = .white
+        cell.backgroundColor = greyColor
+        cell.contentView.backgroundColor = greyColor
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = menuOptions.allCases[indexPath.row]
+        delegate?.didSelecet(menuItem: item)
     }
     
    
