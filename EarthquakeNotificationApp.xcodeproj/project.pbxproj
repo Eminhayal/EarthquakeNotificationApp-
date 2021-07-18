@@ -21,6 +21,13 @@
 		FA77A68D269998BF00DFD2CE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A68C269998BF00DFD2CE /* ContainerViewController.swift */; };
 		FA77A6902699997100DFD2CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A68F2699997100DFD2CE /* HomeViewController.swift */; };
 		FA77A692269999A100DFD2CE /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77A691269999A100DFD2CE /* SideMenuViewController.swift */; };
+		FA95DC4E269A4C0A00CE0A6F /* filterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FA95DC4D269A4C0A00CE0A6F /* filterButton.png */; };
+		FA95DC51269A549B00CE0A6F /* EarthquakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95DC50269A549B00CE0A6F /* EarthquakeViewModel.swift */; };
+		FA95DC53269A580F00CE0A6F /* EarthquakeCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95DC52269A580F00CE0A6F /* EarthquakeCurrency.swift */; };
+		FA95DC56269A594900CE0A6F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95DC55269A594900CE0A6F /* WebService.swift */; };
+		FA95DC58269A5A7400CE0A6F /* HomeExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95DC57269A5A7400CE0A6F /* HomeExtansion.swift */; };
+		FAFEB97826A1FCEC00C98F15 /* ExampleCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEB97626A1FCEC00C98F15 /* ExampleCellTableViewCell.swift */; };
+		FAFEB97926A1FCEC00C98F15 /* ExampleCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFEB97726A1FCEC00C98F15 /* ExampleCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		FA77A68C269998BF00DFD2CE /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		FA77A68F2699997100DFD2CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA77A691269999A100DFD2CE /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		FA95DC4D269A4C0A00CE0A6F /* filterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filterButton.png; sourceTree = "<group>"; };
+		FA95DC50269A549B00CE0A6F /* EarthquakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeViewModel.swift; sourceTree = "<group>"; };
+		FA95DC52269A580F00CE0A6F /* EarthquakeCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeCurrency.swift; sourceTree = "<group>"; };
+		FA95DC55269A594900CE0A6F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		FA95DC57269A5A7400CE0A6F /* HomeExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtansion.swift; sourceTree = "<group>"; };
+		FAFEB97626A1FCEC00C98F15 /* ExampleCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCellTableViewCell.swift; sourceTree = "<group>"; };
+		FAFEB97726A1FCEC00C98F15 /* ExampleCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +113,12 @@
 		FA77A674269997A200DFD2CE /* EarthquakeNotificationApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA95DC54269A593000CE0A6F /* Service */,
+				FA95DC4C269A4BC400CE0A6F /* Resource */,
 				FA77A6972699C7E800DFD2CE /* AppDetails */,
 				FA77A6952699C75700DFD2CE /* Extension */,
 				FA77A68E2699995700DFD2CE /* View */,
+				FA95DC4F269A545B00CE0A6F /* ViewModel */,
 				FA77A6962699C76E00DFD2CE /* Model */,
 				FA77A686269997A500DFD2CE /* Info.plist */,
 				FA77A67E269997A200DFD2CE /* EarthquakeNotificationApp.xcdatamodeld */,
@@ -125,6 +142,7 @@
 			children = (
 				FA0D2502269A362200543BE1 /* UIViewController-Extension.swift */,
 				FA0D2508269A3A0000543BE1 /* ContainerExtension.swift */,
+				FA95DC57269A5A7400CE0A6F /* HomeExtansion.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -132,6 +150,7 @@
 		FA77A6962699C76E00DFD2CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA95DC52269A580F00CE0A6F /* EarthquakeCurrency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +164,32 @@
 				FA77A675269997A200DFD2CE /* AppDelegate.swift */,
 			);
 			path = AppDetails;
+			sourceTree = "<group>";
+		};
+		FA95DC4C269A4BC400CE0A6F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FA95DC4D269A4C0A00CE0A6F /* filterButton.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FA95DC4F269A545B00CE0A6F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA95DC50269A549B00CE0A6F /* EarthquakeViewModel.swift */,
+				FAFEB97626A1FCEC00C98F15 /* ExampleCellTableViewCell.swift */,
+				FAFEB97726A1FCEC00C98F15 /* ExampleCellTableViewCell.xib */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA95DC54269A593000CE0A6F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA95DC55269A594900CE0A6F /* WebService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +252,10 @@
 				FA0D2507269A382600543BE1 /* SideMenu.storyboard in Resources */,
 				FA0D2505269A36CC00543BE1 /* HomeFlow.storyboard in Resources */,
 				FA77A685269997A500DFD2CE /* LaunchScreen.storyboard in Resources */,
+				FAFEB97926A1FCEC00C98F15 /* ExampleCellTableViewCell.xib in Resources */,
 				FA77A682269997A500DFD2CE /* Assets.xcassets in Resources */,
 				FA0D250E269A3CE900543BE1 /* MapInfo.storyboard in Resources */,
+				FA95DC4E269A4C0A00CE0A6F /* filterButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,9 +269,14 @@
 				FA0D2509269A3A0000543BE1 /* ContainerExtension.swift in Sources */,
 				FA77A6902699997100DFD2CE /* HomeViewController.swift in Sources */,
 				FA0D2503269A362200543BE1 /* UIViewController-Extension.swift in Sources */,
+				FAFEB97826A1FCEC00C98F15 /* ExampleCellTableViewCell.swift in Sources */,
+				FA95DC51269A549B00CE0A6F /* EarthquakeViewModel.swift in Sources */,
 				FA77A692269999A100DFD2CE /* SideMenuViewController.swift in Sources */,
+				FA95DC53269A580F00CE0A6F /* EarthquakeCurrency.swift in Sources */,
+				FA95DC56269A594900CE0A6F /* WebService.swift in Sources */,
 				FA77A680269997A200DFD2CE /* EarthquakeNotificationApp.xcdatamodeld in Sources */,
 				FA512FAC2699E59300481B91 /* EarthquakeMapInfoViewController.swift in Sources */,
+				FA95DC58269A5A7400CE0A6F /* HomeExtansion.swift in Sources */,
 				FA77A676269997A200DFD2CE /* AppDelegate.swift in Sources */,
 				FA77A68D269998BF00DFD2CE /* ContainerViewController.swift in Sources */,
 				FA77A678269997A200DFD2CE /* SceneDelegate.swift in Sources */,

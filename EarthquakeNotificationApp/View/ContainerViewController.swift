@@ -23,7 +23,13 @@ class ContainerViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         addChildVC()
+        prepareHomeVM()
         
+    }
+    
+    fileprivate func prepareHomeVM() {
+        let homeVM = EarthquakeListViewModel()
+        homeVC.earthquakeListViewModel = homeVM
     }
     
     func addChildVC(){

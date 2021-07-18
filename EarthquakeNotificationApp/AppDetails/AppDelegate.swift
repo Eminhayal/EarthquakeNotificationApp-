@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  EarthquakeNotificationApp
 //
-//  Created by Emin Hayal on 10.07.2021.
+//  Created by Emin Hayal on 10.07.2021.de
 //
 
 import UIKit

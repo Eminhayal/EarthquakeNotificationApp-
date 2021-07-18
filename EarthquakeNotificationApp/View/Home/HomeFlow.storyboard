@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,31 +13,68 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="65o-9X-MKy" customClass="HomeViewController" customModule="EarthquakeNotificationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0qS-Qs-QWj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyx-Cs-cNW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-J5-oOq">
+                                        <rect key="frame" x="0.0" y="128" width="390" height="716"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="da6-Pk-2aB">
+                                        <rect key="frame" x="345" y="70.666666666666671" width="37" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="0rU-U1-ASL"/>
+                                            <constraint firstAttribute="width" constant="37" id="i1t-JN-ea2"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="filterButton.png"/>
+                                    </button>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Konum Arayın..." translatesAutoresizingMaskIntoConstraints="NO" id="pn1-Lp-LWp">
+                                        <rect key="frame" x="18" y="64" width="311" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="g3A-Ru-zAF"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstItem="bJx-J5-oOq" firstAttribute="top" secondItem="pn1-Lp-LWp" secondAttribute="bottom" constant="20" id="070-dZ-TTW"/>
+                                    <constraint firstAttribute="bottom" secondItem="bJx-J5-oOq" secondAttribute="bottom" id="3JO-jn-vhF"/>
+                                    <constraint firstItem="da6-Pk-2aB" firstAttribute="centerY" secondItem="pn1-Lp-LWp" secondAttribute="centerY" id="bMh-VF-cXb"/>
+                                    <constraint firstItem="pn1-Lp-LWp" firstAttribute="leading" secondItem="hyx-Cs-cNW" secondAttribute="leading" constant="18" id="ff9-pZ-ZAq"/>
+                                    <constraint firstItem="da6-Pk-2aB" firstAttribute="leading" secondItem="pn1-Lp-LWp" secondAttribute="trailing" constant="16" id="hYA-Wh-Cth"/>
+                                    <constraint firstAttribute="trailing" secondItem="bJx-J5-oOq" secondAttribute="trailing" id="sih-KA-AoP"/>
+                                    <constraint firstItem="da6-Pk-2aB" firstAttribute="trailing" secondItem="hyx-Cs-cNW" secondAttribute="trailingMargin" id="tAI-eJ-7yW"/>
+                                    <constraint firstItem="bJx-J5-oOq" firstAttribute="leading" secondItem="hyx-Cs-cNW" secondAttribute="leading" id="zJi-Zq-1KU"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yV2-tl-NfT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="hyx-Cs-cNW" secondAttribute="bottom" id="0Jv-cp-x3R"/>
-                            <constraint firstItem="hyx-Cs-cNW" firstAttribute="top" secondItem="0qS-Qs-QWj" secondAttribute="top" id="R7t-Vi-42X"/>
-                            <constraint firstItem="yV2-tl-NfT" firstAttribute="trailing" secondItem="hyx-Cs-cNW" secondAttribute="trailing" id="XBK-lN-aOW"/>
-                            <constraint firstItem="hyx-Cs-cNW" firstAttribute="leading" secondItem="yV2-tl-NfT" secondAttribute="leading" id="qia-wJ-6tw"/>
+                            <constraint firstItem="pn1-Lp-LWp" firstAttribute="top" secondItem="yV2-tl-NfT" secondAttribute="top" constant="20" id="BBN-I1-tN9"/>
+                            <constraint firstAttribute="trailing" secondItem="hyx-Cs-cNW" secondAttribute="trailing" id="GLe-Mu-gcX"/>
+                            <constraint firstItem="hyx-Cs-cNW" firstAttribute="top" secondItem="0qS-Qs-QWj" secondAttribute="top" id="Y8U-Su-Xeg"/>
+                            <constraint firstAttribute="bottom" secondItem="hyx-Cs-cNW" secondAttribute="bottom" id="n14-Rv-URp"/>
+                            <constraint firstItem="hyx-Cs-cNW" firstAttribute="leading" secondItem="0qS-Qs-QWj" secondAttribute="leading" id="tDr-km-ipT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="pn1-Lp-LWp" id="sKD-g3-4lQ"/>
+                        <outlet property="tableView" destination="bJx-J5-oOq" id="bfB-U4-uk8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmg-bO-K1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26.086956521739133" y="112.5"/>
+            <point key="canvasLocation" x="-26.153846153846153" y="112.32227488151658"/>
         </scene>
     </scenes>
     <resources>
+        <image name="filterButton.png" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
