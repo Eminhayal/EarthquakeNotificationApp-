@@ -53,21 +53,21 @@ extension ContainerViewController : SideMenuViewControllerDelegate{
             case .home:
                 self?.resetToHome()
             case .eartquake:
-                self?.addMapInfoVC()
+                self?.addDevPersonVC()
             }
         }
     }
-    func addMapInfoVC(){
-            let vc = mapInfoVC
+    func addDevPersonVC(){
+            let vc = devPersonVC
             homeVC.addChild(vc)
             homeVC.view.addSubview(vc.view)
             vc.view.frame =  view.frame
             vc.didMove(toParent: homeVC)
-            homeVC.title = vc.title
+            devPersonVC.title = vc.title
         }
     func resetToHome(){
-        mapInfoVC.view.removeFromSuperview()
-        mapInfoVC.didMove(toParent: nil)
+        devPersonVC.view.removeFromSuperview()
+        devPersonVC.didMove(toParent: nil)
         homeVC.title = "Anasayfa"
         }
     

@@ -23,16 +23,8 @@
                                         <rect key="frame" x="0.0" y="128" width="390" height="716"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="da6-Pk-2aB">
-                                        <rect key="frame" x="345" y="70.666666666666671" width="37" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="0rU-U1-ASL"/>
-                                            <constraint firstAttribute="width" constant="37" id="i1t-JN-ea2"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="filterButton.png"/>
-                                    </button>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Konum Arayın..." translatesAutoresizingMaskIntoConstraints="NO" id="pn1-Lp-LWp">
-                                        <rect key="frame" x="18" y="64" width="311" height="44"/>
+                                        <rect key="frame" x="18" y="75" width="354" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="g3A-Ru-zAF"/>
                                         </constraints>
@@ -42,13 +34,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <constraints>
-                                    <constraint firstItem="bJx-J5-oOq" firstAttribute="top" secondItem="pn1-Lp-LWp" secondAttribute="bottom" constant="20" id="070-dZ-TTW"/>
+                                    <constraint firstItem="bJx-J5-oOq" firstAttribute="top" secondItem="pn1-Lp-LWp" secondAttribute="bottom" constant="9" id="070-dZ-TTW"/>
                                     <constraint firstAttribute="bottom" secondItem="bJx-J5-oOq" secondAttribute="bottom" id="3JO-jn-vhF"/>
-                                    <constraint firstItem="da6-Pk-2aB" firstAttribute="centerY" secondItem="pn1-Lp-LWp" secondAttribute="centerY" id="bMh-VF-cXb"/>
+                                    <constraint firstItem="pn1-Lp-LWp" firstAttribute="top" secondItem="hyx-Cs-cNW" secondAttribute="top" constant="75" id="VtR-Sc-1vp"/>
+                                    <constraint firstAttribute="trailing" secondItem="pn1-Lp-LWp" secondAttribute="trailing" constant="18" id="YnM-pU-4Eb"/>
                                     <constraint firstItem="pn1-Lp-LWp" firstAttribute="leading" secondItem="hyx-Cs-cNW" secondAttribute="leading" constant="18" id="ff9-pZ-ZAq"/>
-                                    <constraint firstItem="da6-Pk-2aB" firstAttribute="leading" secondItem="pn1-Lp-LWp" secondAttribute="trailing" constant="16" id="hYA-Wh-Cth"/>
                                     <constraint firstAttribute="trailing" secondItem="bJx-J5-oOq" secondAttribute="trailing" id="sih-KA-AoP"/>
-                                    <constraint firstItem="da6-Pk-2aB" firstAttribute="trailing" secondItem="hyx-Cs-cNW" secondAttribute="trailingMargin" id="tAI-eJ-7yW"/>
                                     <constraint firstItem="bJx-J5-oOq" firstAttribute="leading" secondItem="hyx-Cs-cNW" secondAttribute="leading" id="zJi-Zq-1KU"/>
                                 </constraints>
                             </view>
@@ -56,7 +47,7 @@
                         <viewLayoutGuide key="safeArea" id="yV2-tl-NfT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pn1-Lp-LWp" firstAttribute="top" secondItem="yV2-tl-NfT" secondAttribute="top" constant="20" id="BBN-I1-tN9"/>
+                            <constraint firstItem="pn1-Lp-LWp" firstAttribute="top" secondItem="yV2-tl-NfT" secondAttribute="top" constant="31" id="BBN-I1-tN9"/>
                             <constraint firstAttribute="trailing" secondItem="hyx-Cs-cNW" secondAttribute="trailing" id="GLe-Mu-gcX"/>
                             <constraint firstItem="hyx-Cs-cNW" firstAttribute="top" secondItem="0qS-Qs-QWj" secondAttribute="top" id="Y8U-Su-Xeg"/>
                             <constraint firstAttribute="bottom" secondItem="hyx-Cs-cNW" secondAttribute="bottom" id="n14-Rv-URp"/>
@@ -74,7 +65,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="filterButton.png" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

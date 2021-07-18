@@ -12,6 +12,7 @@ public enum StoryboardNames: String {
     case sideMenu = "SideMenu"
     case homeFlow = "HomeFlow" // storyboard
     case mapInfo = "MapInfo"
+    case devPerson = "DevPerson"
 }
 
 protocol StoryboardSettings {

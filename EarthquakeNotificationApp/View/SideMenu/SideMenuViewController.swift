@@ -13,7 +13,9 @@ protocol SideMenuViewControllerDelegate: AnyObject {
 
 class SideMenuViewController: UIViewController , UITableViewDelegate , UITableViewDataSource {
 
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomView: UIView!
     
     weak var delegate : SideMenuViewControllerDelegate?
     
@@ -42,9 +44,9 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-       
-        tableView.backgroundColor = nil
-        
+        bottomView.backgroundColor = greyColor
+        tableView.backgroundColor = greyColor
+        backgroundView.backgroundColor = greyColor  
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

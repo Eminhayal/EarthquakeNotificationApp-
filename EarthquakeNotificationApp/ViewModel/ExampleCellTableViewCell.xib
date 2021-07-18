@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -37,35 +36,36 @@
                             <constraint firstItem="wa3-iv-9V6" firstAttribute="top" secondItem="iqP-gz-NOj" secondAttribute="top" constant="10" id="uMD-7r-I7V"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxm-Eo-5Iw">
-                        <rect key="frame" x="115" y="64.5" width="178" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxm-Eo-5Iw">
+                        <rect key="frame" x="115" y="65" width="178" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-QS-Ppq">
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-QS-Ppq">
                         <rect key="frame" x="313" y="63" width="71" height="24"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Otk-aw-TVw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow.up.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Otk-aw-TVw">
                                 <rect key="frame" x="0.0" y="3" width="23.5" height="18"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 KM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENQ-z2-pLR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0.0 KM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENQ-z2-pLR">
                                 <rect key="frame" x="29.5" y="4" width="43" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ENQ-z2-pLR" firstAttribute="leading" secondItem="Otk-aw-TVw" secondAttribute="trailing" constant="6" id="Njj-RM-Izb"/>
-                            <constraint firstItem="Otk-aw-TVw" firstAttribute="leading" secondItem="Hky-QS-Ppq" secondAttribute="leading" id="pZP-sC-ePA"/>
-                            <constraint firstAttribute="bottom" secondItem="Otk-aw-TVw" secondAttribute="bottom" constant="2" id="wIC-Ib-PMh"/>
-                            <constraint firstItem="Otk-aw-TVw" firstAttribute="top" secondItem="Hky-QS-Ppq" secondAttribute="top" constant="2" id="y9p-Fy-buj"/>
+                            <constraint firstItem="ENQ-z2-pLR" firstAttribute="centerY" secondItem="Hky-QS-Ppq" secondAttribute="centerY" id="9gX-CP-DKb"/>
+                            <constraint firstItem="ENQ-z2-pLR" firstAttribute="centerY" secondItem="Otk-aw-TVw" secondAttribute="centerY" id="QQq-oo-XVp"/>
+                            <constraint firstItem="ENQ-z2-pLR" firstAttribute="leading" secondItem="Otk-aw-TVw" secondAttribute="trailing" constant="6" id="fQm-eq-wc2"/>
+                            <constraint firstItem="ENQ-z2-pLR" firstAttribute="top" secondItem="Hky-QS-Ppq" secondAttribute="top" constant="4" id="oFq-1q-nvF"/>
+                            <constraint firstAttribute="trailing" secondItem="ENQ-z2-pLR" secondAttribute="trailing" constant="-1.5" id="swj-Hd-KkS"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-Fc-V94">
-                        <rect key="frame" x="115" y="93" width="129" height="22"/>
+                        <rect key="frame" x="115" y="92.666666666666671" width="129" height="22.333333333333329"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="129" id="MZq-i9-ysc"/>
                         </constraints>
@@ -77,14 +77,13 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="c4o-Fc-V94" firstAttribute="bottom" secondItem="iqP-gz-NOj" secondAttribute="bottom" id="99J-WM-jv1"/>
-                    <constraint firstAttribute="trailing" secondItem="Hky-QS-Ppq" secondAttribute="trailing" constant="14" id="9w5-0y-PqB"/>
+                    <constraint firstItem="Hky-QS-Ppq" firstAttribute="leading" secondItem="rxm-Eo-5Iw" secondAttribute="trailing" constant="20" id="EyW-XH-xpF"/>
                     <constraint firstItem="rxm-Eo-5Iw" firstAttribute="leading" secondItem="iqP-gz-NOj" secondAttribute="trailing" constant="19" id="JiZ-Y7-Gah"/>
                     <constraint firstItem="iqP-gz-NOj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Njv-9z-7Nb"/>
-                    <constraint firstItem="Hky-QS-Ppq" firstAttribute="leading" secondItem="iqP-gz-NOj" secondAttribute="trailing" constant="217" id="Xyc-gA-Xcc"/>
-                    <constraint firstItem="Hky-QS-Ppq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="63" id="ae7-Io-ZTP"/>
-                    <constraint firstItem="ENQ-z2-pLR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eME-hh-uAl"/>
-                    <constraint firstItem="Hky-QS-Ppq" firstAttribute="leading" secondItem="rxm-Eo-5Iw" secondAttribute="trailing" constant="20" id="lox-xd-hmL"/>
-                    <constraint firstAttribute="bottom" secondItem="Hky-QS-Ppq" secondAttribute="bottom" constant="63" id="nm5-Zc-HJv"/>
+                    <constraint firstItem="Hky-QS-Ppq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="OyO-ae-HDh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Hky-QS-Ppq" secondAttribute="trailing" constant="-6" id="ZyL-EH-XL9"/>
+                    <constraint firstItem="Hky-QS-Ppq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="313" id="ia6-Fo-s9Y"/>
+                    <constraint firstItem="Hky-QS-Ppq" firstAttribute="centerY" secondItem="rxm-Eo-5Iw" secondAttribute="centerY" id="ofR-3A-WRZ"/>
                     <constraint firstItem="c4o-Fc-V94" firstAttribute="leading" secondItem="rxm-Eo-5Iw" secondAttribute="leading" id="vCf-dP-dFE"/>
                     <constraint firstItem="c4o-Fc-V94" firstAttribute="top" secondItem="rxm-Eo-5Iw" secondAttribute="bottom" constant="7.5" id="xOu-sR-Ufu"/>
                     <constraint firstItem="rxm-Eo-5Iw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yy1-ou-tsD"/>
@@ -106,8 +105,5 @@
     </objects>
     <resources>
         <image name="arrow.up.arrow.down" catalog="system" width="128" height="98"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

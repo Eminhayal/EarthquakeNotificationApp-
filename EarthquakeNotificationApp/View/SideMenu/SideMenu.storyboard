@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,43 +13,31 @@
             <objects>
                 <viewController storyboardIdentifier="SideMenuViewController" id="Y7y-AZ-uff" customClass="SideMenuViewController" customModule="EarthquakeNotificationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o8u-ux-4EM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sro-2C-evB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cTM-77-YIi">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="810"/>
+                                        <rect key="frame" x="0.0" y="208" width="390" height="550"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6W5-wN-a5E">
-                                        <rect key="frame" x="0.0" y="810" width="414" height="86"/>
+                                        <rect key="frame" x="0.0" y="758" width="390" height="86"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnW-r7-UWC">
-                                                <rect key="frame" x="22" y="8" width="42" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="J4s-Ib-pDd"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEs-TL-SWN">
-                                                <rect key="frame" x="22" y="33" width="42" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version : 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnW-r7-UWC">
+                                                <rect key="frame" x="35" y="8" width="137" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="sEs-TL-SWN" firstAttribute="leading" secondItem="6W5-wN-a5E" secondAttribute="leading" constant="22" id="9jz-WB-IA7"/>
-                                            <constraint firstItem="pnW-r7-UWC" firstAttribute="leading" secondItem="6W5-wN-a5E" secondAttribute="leading" constant="22" id="Wae-HS-ErR"/>
-                                            <constraint firstItem="pnW-r7-UWC" firstAttribute="top" secondItem="6W5-wN-a5E" secondAttribute="top" constant="8" id="XLv-Ri-BY4"/>
                                             <constraint firstAttribute="height" constant="86" id="kMa-Pk-bKX"/>
-                                            <constraint firstAttribute="bottom" secondItem="sEs-TL-SWN" secondAttribute="bottom" constant="32" id="t2t-3o-f91"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -61,7 +49,7 @@
                                     <constraint firstItem="6W5-wN-a5E" firstAttribute="leading" secondItem="sro-2C-evB" secondAttribute="leading" id="fxN-Pw-r4b"/>
                                     <constraint firstAttribute="trailing" secondItem="6W5-wN-a5E" secondAttribute="trailing" id="lCl-xQ-4p2"/>
                                     <constraint firstAttribute="trailing" secondItem="cTM-77-YIi" secondAttribute="trailing" id="mWj-EP-oYg"/>
-                                    <constraint firstItem="cTM-77-YIi" firstAttribute="top" secondItem="sro-2C-evB" secondAttribute="top" id="y1C-xq-Ld5"/>
+                                    <constraint firstItem="cTM-77-YIi" firstAttribute="top" secondItem="sro-2C-evB" secondAttribute="top" constant="208" id="y1C-xq-Ld5"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -75,12 +63,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="sro-2C-evB" id="qJg-1k-VzK"/>
+                        <outlet property="bottomView" destination="6W5-wN-a5E" id="jlE-Gr-dDO"/>
                         <outlet property="tableView" destination="cTM-77-YIi" id="vKW-Nz-kpE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXv-zr-x23" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="-56"/>
+            <point key="canvasLocation" x="24.637681159420293" y="-56.25"/>
         </scene>
     </scenes>
     <resources>

@@ -20,10 +20,11 @@ class ExampleCellTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setColorAndRadius()
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+        
+        
+    }
+        override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
     }
@@ -32,19 +33,39 @@ class ExampleCellTableViewCell: UITableViewCell {
         nameLabel.text = data.place
         mwLabel.text = String(data.mw)
         dateLabel.text = String(data.date)
-        depthLabel.text = String(data.depth)
+        depthLabel.text = "\(String(data.depth)) Km"
     }
-    fileprivate func setColorAndRadius() {
+    
+    
+     func setColorAndRadius() {
+        let md = mwLabel.text!
         firstCons.layer.cornerRadius = firstCons.frame.size.height/2
         firstCons.layer.borderWidth = 0
         firstCons.layer.masksToBounds = false
-        firstCons.layer.shadowColor = UIColor.red.cgColor
         firstCons.layer.shadowOpacity = 1
         firstCons.layer.shadowOffset = .zero
         firstCons.layer.shadowRadius = 10
-        firstCons.backgroundColor = .red
+        if ( md == "-.-" ){
+            firstCons.backgroundColor = .green
+            firstCons.layer.shadowColor = UIColor.green.cgColor
+        }
+        else if ( "0.0" < md ) && (md < "1.5")  {
+            firstCons.backgroundColor = .gray
+            firstCons.layer.shadowColor = UIColor.gray.cgColor
+        }else if ("1.5" <= md) && (md < "3.0") {
+            firstCons.backgroundColor = .brown
+            firstCons.layer.shadowColor = UIColor.brown.cgColor
+        }else if ("3.0" <= md) && (md < "4.5") {
+            firstCons.backgroundColor = .yellow
+            firstCons.layer.shadowColor = UIColor.yellow.cgColor
+        }else if ("4.5" <= md) && (md < "6.5") {
+            firstCons.backgroundColor = .systemPink
+            firstCons.layer.shadowColor = UIColor.systemPink.cgColor
+        }else {
+            firstCons.backgroundColor = .red
+            firstCons.layer.shadowColor = UIColor.red.cgColor
+        }
     }
-    
 }
 
 extension ExampleCellTableViewCell {
@@ -56,4 +77,3 @@ extension ExampleCellTableViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
 }
-	

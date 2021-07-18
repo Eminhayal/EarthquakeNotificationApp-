@@ -37,7 +37,7 @@ class HomeViewController: UIViewController , UITableViewDelegate , UITableViewDa
         tableView.register(ExampleCellTableViewCell.nibName, forCellReuseIdentifier: ExampleCellTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 100
+        tableView.rowHeight = 110
     }
     
     fileprivate func setupUI() {
@@ -63,8 +63,7 @@ class HomeViewController: UIViewController , UITableViewDelegate , UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: ExampleCellTableViewCell.identifier, for: indexPath) as! ExampleCellTableViewCell
         let earthquakeViewModel = earthquakeListViewModel.earthqueakeAtIndex(indexPath.row)
         cell.conf(data: earthquakeViewModel)
-        
-        
+        cell.setColorAndRadius()
         return cell
         
     }

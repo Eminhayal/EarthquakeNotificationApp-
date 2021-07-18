@@ -42,13 +42,5 @@ class EarthquakeListViewModel {
             }
         }
     }
-    func alıstırma(array : [String] , searchBarData : [String]){
-        
-        
-        
-        for item in array {
-           // searchBarData.append(item)
-        }
-        }
-    }
+}
 
