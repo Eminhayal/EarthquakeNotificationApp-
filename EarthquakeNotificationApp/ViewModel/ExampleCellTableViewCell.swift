@@ -31,7 +31,7 @@ class ExampleCellTableViewCell: UITableViewCell {
     
     func conf(data: Earthquake) {
         nameLabel.text = data.place
-        mwLabel.text = String(data.mw)
+        mwLabel.text = data.mw == "-.-" ? data.ml : data.mw
         dateLabel.text = String(data.date)
         depthLabel.text = "\(String(data.depth)) Km"
     }

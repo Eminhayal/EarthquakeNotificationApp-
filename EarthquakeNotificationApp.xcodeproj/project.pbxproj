@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0402C026A8D39E000136AD /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0402BF26A8D39E000136AD /* IndicatorViewController.swift */; };
+		FA0402C426A8E5F7000136AD /* Indicator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0402C326A8E5F7000136AD /* Indicator.storyboard */; };
 		FA0D2503269A362200543BE1 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D2502269A362200543BE1 /* UIViewController-Extension.swift */; };
 		FA0D2505269A36CC00543BE1 /* HomeFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0D2504269A36CC00543BE1 /* HomeFlow.storyboard */; };
 		FA0D2507269A382600543BE1 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0D2506269A382600543BE1 /* SideMenu.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0402BF26A8D39E000136AD /* IndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
+		FA0402C326A8E5F7000136AD /* Indicator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Indicator.storyboard; sourceTree = "<group>"; };
 		FA0D2502269A362200543BE1 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
 		FA0D2504269A36CC00543BE1 /* HomeFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeFlow.storyboard; sourceTree = "<group>"; };
 		FA0D2506269A382600543BE1 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0402BE26A8D34A000136AD /*  Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				FA0402BF26A8D39E000136AD /* IndicatorViewController.swift */,
+				FA0402C326A8E5F7000136AD /* Indicator.storyboard */,
+			);
+			path = " Indicator";
+			sourceTree = "<group>";
+		};
 		FA0D250A269A3C5900543BE1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 		FA77A68E2699995700DFD2CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA0402BE26A8D34A000136AD /*  Indicator */,
 				FA77A68C269998BF00DFD2CE /* ContainerViewController.swift */,
 				FA67A99826A4867700217C54 /* DeveloperPerson */,
 				FA0D250C269A3C9600543BE1 /* Info */,
@@ -271,6 +285,7 @@
 				FA0D2505269A36CC00543BE1 /* HomeFlow.storyboard in Resources */,
 				FA77A685269997A500DFD2CE /* LaunchScreen.storyboard in Resources */,
 				FAFEB97926A1FCEC00C98F15 /* ExampleCellTableViewCell.xib in Resources */,
+				FA0402C426A8E5F7000136AD /* Indicator.storyboard in Resources */,
 				FA77A682269997A500DFD2CE /* Assets.xcassets in Resources */,
 				FA0D250E269A3CE900543BE1 /* MapInfo.storyboard in Resources */,
 				FA95DC4E269A4C0A00CE0A6F /* filterButton.png in Resources */,
@@ -284,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0402C026A8D39E000136AD /* IndicatorViewController.swift in Sources */,
 				FA0D2509269A3A0000543BE1 /* ContainerExtension.swift in Sources */,
 				FA77A6902699997100DFD2CE /* HomeViewController.swift in Sources */,
 				FA67A99E26A486D900217C54 /* DeveloperPersonViewModel.swift in Sources */,
@@ -368,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -423,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,16 +455,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y9N6MZS2UR;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = ZUBBCB62N3;
 				INFOPLIST_FILE = EarthquakeNotificationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eminhayal.EarthquakeNotificationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eminhayal.earthquake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,16 +475,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y9N6MZS2UR;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = ZUBBCB62N3;
 				INFOPLIST_FILE = EarthquakeNotificationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eminhayal.EarthquakeNotificationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eminhayal.earthquake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

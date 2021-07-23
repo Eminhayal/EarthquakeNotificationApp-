@@ -11,22 +11,24 @@ class ContainerViewController: UIViewController {
      enum MenuState {
         case opened
         case closed
+        
     }
     var menuState: MenuState = .closed
-    
     let menuVC = SideMenuViewController.instantiate(storyboard: .sideMenu, bundle: nil, identifier: nil)
     let homeVC = HomeViewController.instantiate(storyboard: .homeFlow, bundle: nil, identifier: nil)
     let devPersonVC = DeveloperPersonViewController.instantiate(storyboard: .devPerson, bundle: nil, identifier: nil)
     var navVC = UINavigationController()
-    
+
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         view.backgroundColor = .red
         addChildVC()
         prepareHomeVM()
+       
         
     }
-    
     fileprivate func prepareHomeVM() {
         let homeVM = EarthquakeListViewModel()
         homeVC.earthquakeListViewModel = homeVM

@@ -20,22 +20,22 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
     weak var delegate : SideMenuViewControllerDelegate?
     
     enum menuOptions : String , CaseIterable{
-        case home = "Anasayfa"
-        case eartquake = "Deprem"
+        case home = "Son Depremler"
+        case profile = "Uygulama Geliştirici"
         
         var imageName : String {
             switch self {
             
             case .home:
-                return "house"
-            case .eartquake:
-                return "star"
+                return "home"
+            case .profile:
+                return "profile"
             }
         }
     }
     
     
-    let greyColor = UIColor(red: 33/225.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
+    let greyColor = UIColor(red: 97/225.0, green: 56/255.0, blue: 86/255.0, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +61,7 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell" , for: indexPath)
         cell.textLabel?.text = menuOptions.allCases[indexPath.row].rawValue
         cell.textLabel?.textColor = .white
-        cell.imageView?.image = UIImage(systemName: menuOptions.allCases[indexPath.row].imageName)
+        cell.imageView?.image = UIImage(named: menuOptions.allCases[indexPath.row].imageName)
         cell.imageView?.tintColor = .white
         cell.backgroundColor = greyColor
         cell.contentView.backgroundColor = greyColor

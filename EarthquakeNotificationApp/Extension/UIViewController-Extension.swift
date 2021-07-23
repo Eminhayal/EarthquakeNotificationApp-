@@ -13,6 +13,9 @@ public enum StoryboardNames: String {
     case homeFlow = "HomeFlow" // storyboard
     case mapInfo = "MapInfo"
     case devPerson = "DevPerson"
+    case earthquakeMap = "Map"
+    case indicator = "Indicator"
+    
 }
 
 protocol StoryboardSettings {
@@ -51,4 +54,7 @@ public extension UIViewController {
         }
         return viewController
     }
+}
+public extension UIViewController {
+    
 }

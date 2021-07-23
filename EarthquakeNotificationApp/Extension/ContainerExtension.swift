@@ -52,7 +52,7 @@ extension ContainerViewController : SideMenuViewControllerDelegate{
             
             case .home:
                 self?.resetToHome()
-            case .eartquake:
+            case .profile:
                 self?.addDevPersonVC()
             }
         }
@@ -64,11 +64,12 @@ extension ContainerViewController : SideMenuViewControllerDelegate{
             vc.view.frame =  view.frame
             vc.didMove(toParent: homeVC)
             devPersonVC.title = vc.title
+            homeVC.title = "Uygulama Geliştirici"
         }
     func resetToHome(){
         devPersonVC.view.removeFromSuperview()
         devPersonVC.didMove(toParent: nil)
-        homeVC.title = "Anasayfa"
+        homeVC.title = "Son Depremler"
         }
     
 

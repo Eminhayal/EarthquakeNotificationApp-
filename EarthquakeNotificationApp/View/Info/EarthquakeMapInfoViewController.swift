@@ -37,11 +37,12 @@ class EarthquakeMapInfoViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Deprem Harita Bilgilendirme"
+        
         firsViewLabelOne.text = "Y:\(String(describing: earthquakeData?.longitude ?? 0.0))"
         firstViewLabelTwo.text = "X:\(String(describing: earthquakeData?.latitude ?? 0.0 ))"
         secondViewLabel.text = earthquakeData?.mw
         thirdViewLabel.text = earthquakeData?.ml
-        mdLabel.text =  earthquakeData?.mw
+        mdLabel.text =  earthquakeData?.mw == "-.-" ? earthquakeData?.ml : earthquakeData?.mw
         placeName.text = earthquakeData?.place
         dateLabel.text = earthquakeData?.date
         distanceLabel.text = "\(String(describing: earthquakeData?.depth ?? 0.0)) KM"
@@ -55,13 +56,13 @@ class EarthquakeMapInfoViewController: UIViewController  {
         mapView.showAnnotations(self.mapView.annotations, animated: true)
         mapView.camera.altitude *= 40;
         
-        
         setLayout()
         
         }
     
     @IBAction func hideBtnClick(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, delay: 0.5, options: .autoreverse, animations: {
+        
+        UIView.animate(withDuration: 0.5, animations:  {
             if  self.infoView.isHidden == true{
                 self.infoView.isHidden = false
             }else {
